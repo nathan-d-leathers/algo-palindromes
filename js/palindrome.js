@@ -1,7 +1,7 @@
 exports.palindrome = function(word) {
-    
-    word = word.toString().toLowerCase();
-    let amswer = "";
+    let regex = /[^a-z0-9]/gi
+    word = word.toString().toLowerCase().replace(regex, "");
+    let answer = "";
 
     if (word.length % 2 != 0) {
         let midChar = (word.length / 2) -.5;
